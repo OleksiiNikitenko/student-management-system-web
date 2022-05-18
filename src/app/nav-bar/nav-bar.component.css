@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+ul li{
+  list-style: none;
+}
+/* HEADER SECTION */
+
+header {
+  width: 100%;
+  font-family: 'Quicksand', sans-serif;
+}
+
+header .navigation-bar {
+  /* width: 90%;
+  margin: 0 auto; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(0, 35, 208);
+}
+
+header .navigation-bar .logo {
+  /* width: 90%; */
+  /* margin: 0 auto; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+header .navigation-bar .logo h1 {
+  font-size: 2.6rem;
+  font-weight: 900;
+  color: rgb(255, 255, 255);
+  margin: 10px 30px;
+  position: relative;
+}
+
+header .navigation-bar .logo h3{
+  font-size: 1.5rem;
+  color: rgb(255, 252, 163);
+  transition: all 0.5s ease;
+  margin: 0 50px;
+  position: relative;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 30px;
+  left: 45px;
+  background-color: #ffffff;
+  width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);
+  padding: 10px 10px;
+  z-index: 1;
+  border-radius: 10px;
+  transition: all 0.5s ease;
+}
+
+.dropdown-content  ul li a{
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: rgb(0, 35, 208);
+}
+
+.drop {
+  position: relative;
+  transition: all 0.5s ease;
+}
+
+.drop:hover .dropdown-content {
+  display: block;
+}
+
+header .navigation-bar .logo h3:hover{
+  color: rgb(255, 247, 0);
+}
+
+header .navigation-bar .menu-right{
+  /* background-color: antiquewhite; */
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+header .navigation-bar .menu-right img{
+  display: block;
+  width: 30%;
+  margin: 0 auto;
+  border: 8px solid transparent;
+  border-radius: 50%;
+  outline: 3px solid rgb(255, 247, 0);
+  cursor: pointer;
+  position: relative;
+}
+
+header .navigation-bar .menu-right span{
+  cursor: pointer;
+  font-size: 40px;
+  position: absolute;
+  top: 10px;
+  right: 80px;
+  color: rgb(255, 247, 0);
+}
+
+.menu-right .dropdown-acount {
+  display: none;
+  position: absolute;
+  top: 56px;
+  right: 40px;
+  background-color: #ffffff;
+  width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);
+  padding: 10px 10px;
+  z-index: 1;
+  border-radius: 10px;
+  transition: all 0.5s ease;
+}
+
+.menu-right .dropdown-acount ul li a{
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: rgb(0, 35, 208);
+}
+
+.drop-account {
+  position: relative;
+}
+
+.drop-account:hover .dropdown-acount {
+  display: block;
+}
+

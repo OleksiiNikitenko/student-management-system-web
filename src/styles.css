@@ -1,1 +1,421 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+ul li{
+  list-style: none;
+}
+/* HEADER SECTION */
+
+header {
+  width: 100%;
+  font-family: 'Quicksand', sans-serif;
+}
+
+header .navigation-bar {
+  /* width: 90%;
+  margin: 0 auto; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(0, 35, 208);
+}
+
+header .navigation-bar .logo {
+  /* width: 90%; */
+  /* margin: 0 auto; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+header .navigation-bar .logo h1 {
+  font-size: 2.6rem;
+  font-weight: 900;
+  color: rgb(255, 255, 255);
+  margin: 10px 30px;
+  position: relative;
+}
+
+header .navigation-bar .logo h3{
+  font-size: 1.5rem;
+  color: rgb(255, 252, 163);
+  transition: all 0.5s ease;
+  margin: 0 50px;
+  position: relative;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 30px;
+  left: 45px;
+  background-color: #ffffff;
+  width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);
+  padding: 10px 10px;
+  z-index: 1;
+  border-radius: 10px;
+  transition: all 0.5s ease;
+}
+
+.dropdown-content  ul li a{
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: rgb(0, 35, 208);
+}
+
+.drop {
+  position: relative;
+  transition: all 0.5s ease;
+}
+
+.drop:hover .dropdown-content {
+  display: block;
+}
+
+header .navigation-bar .logo h3:hover{
+  color: rgb(255, 247, 0);
+}
+
+header .navigation-bar .menu-right{
+  /* background-color: antiquewhite; */
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+header .navigation-bar .menu-right img{
+  display: block;
+  width: 30%;
+  margin: 0 auto;
+  border: 8px solid transparent;
+  border-radius: 50%;
+  outline: 3px solid rgb(255, 247, 0);
+  cursor: pointer;
+  position: relative;
+}
+
+header .navigation-bar .menu-right span{
+  cursor: pointer;
+  font-size: 40px;
+  position: absolute;
+  top: 10px;
+  right: 80px;
+  color: rgb(255, 247, 0);
+}
+
+.menu-right .dropdown-acount {
+  display: none;
+  position: absolute;
+  top: 56px;
+  right: 40px;
+  background-color: #ffffff;
+  width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);
+  padding: 10px 10px;
+  z-index: 1;
+  border-radius: 10px;
+  transition: all 0.5s ease;
+}
+
+.menu-right .dropdown-acount ul li a{
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: rgb(0, 35, 208);
+}
+
+.drop-account {
+  position: relative;
+}
+
+.drop-account:hover .dropdown-acount {
+  display: block;
+}
+
+
+/* MAIN SECTION */
+.main-page {
+  /* background-color: antiquewhite; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.main-page .logo-main {
+  /* background-color: aqua; */
+  width: 45%;
+
+}
+.main-page .logo-main h1 {
+  text-align: center;
+  font-size: 3.5rem;
+}
+
+.main-page .logo-main img {
+  display: block;
+  width: 70%;
+  /* background-color: brown; */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*
+ACCOUNT PAGE  */
+
+.account-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 85vh;
+}
+
+/* SECTION ACCOUNT PAGE */
+.account-page .info-box{
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 20px;
+  border: 2px solid black;
+}
+
+.account-page .info-box img{
+  width: 20%;
+  border-radius: 50%;
+  margin: 20px;
+}
+
+.account-page .info-box .main-info-box{
+  margin: 20px;
+  width: 50%;
+}
+.account-page .info-box .main-info-box h1{
+  font-size: 2.5rem;
+}
+.account-page .info-box .main-info-box h5 {
+  font-size: 1rem;
+}
+.account-page .info-box .main-info-box h3 {
+  font-size: 1.5rem;
+  line-height: 50px;
+}
+.account-page .info-box .main-info-box span{
+  font-size: 1.7rem;
+  font-weight: 100;
+}
+
+.account-page .info-box .edit-box {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin: 0px 90px;
+  border: 20px solid transparent;
+  outline: 5px solid black;
+  border-radius: 10px;
+}
+.account-page .info-box .edit-box button {
+  width: 300px;
+  margin: 20px auto;
+  padding: 20px;
+  background: transparent;
+  border: 3px solid black;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+
+/* TEACHER MANAGE */
+
+svg{
+  width: 15%;
+}
+
+.teacher-management .title-teacher{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.teacher-management .title-teacher h1{
+  font-size: 3rem;
+  margin: 50px 30px;
+}
+
+.teacher-management .title-teacher a{
+  margin: 50px 30px;
+  font-size: 2rem;
+  background-color: transparent;
+  padding: 10px 15px;
+  border: 3px solid;
+  border-radius: 10px;
+  transition: all 0.5s ease;
+  color: black;
+}
+.teacher-management .title-teacher a:hover{
+  background-color: rgb(118, 255, 118);
+}
+
+.teacher-management .teacher-card{
+  /* background-color: aquamarine; */
+  display: flex;
+  width: 90%;
+  margin: 20px auto;
+  border: 2px solid black;
+
+}
+.teacher-management .teacher-card img{
+  margin: 30px;
+  border-radius: 50%;
+  width: 6%;
+  border: 2px solid black;
+}
+
+.teacher-management .teacher-card .teacher-info{
+  width: 70%;
+  margin: 30px;
+  font-size: 1.2rem;
+  line-height: 50px;
+}
+.teacher-management .teacher-card .menu-box{
+  width: 60%;
+  margin: 30px;
+  display: flex;
+  align-items: center;
+}
+.teacher-management .teacher-card .menu-box a{
+  color: black;
+  text-align: center;
+  border: 1px solid black;
+  padding: 5px;
+  margin: 20px;
+  font-size: 1.5rem;
+}
+
+/* TEACHER POPUPS */
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 2s ease-in-out;
+}
+
+.popup .popup-title{
+  font-size: 3rem;
+}
+
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+  margin-top: 20px;
+  line-height: 40px;
+}
+
+.popup .content h3{
+  font-size: 1.3rem;
+}
+.popup .content span{
+  font-size: 1.3rem;
+}
+.popup .content h2 {
+  font-size: 1.3rem;
+}
+.popup .content button{
+  background-color: transparent;
+  color: black;
+  border: 2px solid black;
+  margin: 0 10px;
+  padding: 2px 5px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.popup .content button:active{
+  background-color: rgb(255, 248, 175);;
+}
+.popup .content .del-btn{
+  background-color: rgb(255, 100, 100);
+  font-size: 1.5rem;
+  margin: 20px 0;
+}
+.popup .content .del-btn:active{
+  background-color: red;
+}
+
+.popup .content form {
+  display: flex;
+  flex-direction: column;
+  margin: 40px ;
+}
+
+.popup .content form label{
+  font-size: 1.3rem;
+}
+
+.popup .content form input{
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+
+.popup .content form .submit{
+  margin-top: 20px;
+}
+
+.popup .info-content {
+  display: flex;
+  flex-direction: column;
+}
+.popup .info-content img {
+  width: 50%;
+  display: block;
+  margin: 0 auto;
+}
+
+.popup .edit-content #sub1{
+  margin-top: 20px;
+}
