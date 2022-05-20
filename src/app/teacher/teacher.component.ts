@@ -1,18 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, Optional} from '@angular/core';
 import {Teacher} from "./teacher";
 import {TeacherService} from "./teacher.service";
 import {HttpErrorResponse} from "@angular/common/http";
+import {AddTeacherComponent} from "../popups/add-teacher/add-teacher.component";
 
 @Component({
   selector: 'app-teacher',
   templateUrl: './teacher.component.html',
-  styleUrls: ['./teacher.component.css']
+  styleUrls: ['./teacher.component.css'],
+  providers: [AddTeacherComponent]
 })
 export class TeacherComponent implements OnInit {
 
   public teachers: Teacher[] = [];
 
-  constructor(private teacherService: TeacherService) {
+  constructor(private teacherService: TeacherService,
+               public dialogAddTeacher: AddTeacherComponent) {
   }
 
   ngOnInit(): void {

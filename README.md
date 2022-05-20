@@ -29,3 +29,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Add dependencies
 Run `npm install @angular-devkit/build-angular` to install builder's node package
+Run `ng add @angular/material`
