@@ -6,6 +6,7 @@ import {AddTeacherComponent} from "../popups/add-teacher/add-teacher.component";
 import {DeleteComponent} from "../popups/delete/delete.component";
 import {MatDialog} from "@angular/material/dialog";
 import {ShowInfoComponent} from "../popups/show-info/show-info.component";
+import {EmailComponent} from "../popups/email/email.component";
 
 @Component({
   selector: 'app-teacher',
@@ -61,4 +62,18 @@ export class TeacherComponent implements OnInit {
     })
   }
 
+  openEmailDialog() {
+    const dialogRef = this.dialog.open(EmailComponent, {
+      width: '500px',
+      data: {
+        name: this.selectedTeacher.name,
+        email: this.selectedTeacher.email,
+        phone: this.selectedTeacher.phone
+      }
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      this.logResFromPopup = result;
+      console.log(` data: ${result}`)
+    })
+  }
 }
