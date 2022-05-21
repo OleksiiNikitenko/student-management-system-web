@@ -1,4 +1,4 @@
-import {Component, OnInit, Optional} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Teacher} from "./teacher";
 import {TeacherService} from "./teacher.service";
 import {HttpErrorResponse} from "@angular/common/http";
@@ -7,6 +7,7 @@ import {DeleteComponent} from "../popups/delete/delete.component";
 import {MatDialog} from "@angular/material/dialog";
 import {ShowInfoComponent} from "../popups/show-info/show-info.component";
 import {EmailComponent} from "../popups/email/email.component";
+import {EditComponent} from "../popups/edit/edit.component";
 
 @Component({
   selector: 'app-teacher',
@@ -90,4 +91,26 @@ export class TeacherComponent implements OnInit {
       this.getTeachers();
     })
   }
+
+  openEditDialog() {
+    const dialogRef = this.dialog.open(EditComponent, {
+      width: '500px',
+      data: {
+        id: this.selectedTeacher.id,
+        name: this.selectedTeacher.name,
+        email: this.selectedTeacher.email,
+        jobTitle: this.selectedTeacher.jobTitle,
+        phone: this.selectedTeacher.phone,
+        imgUrl: this.selectedTeacher.imgUrl,
+        teacherCode: this.selectedTeacher.teacherCode
+      }
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      this.logResFromPopup = result;
+      console.log(` data: ${result}`);
+      this.getTeachers();
+    })
+  }
+
+
 }
