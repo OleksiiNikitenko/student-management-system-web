@@ -12,7 +12,7 @@ import {EmailComponent} from "../popups/email/email.component";
   selector: 'app-teacher',
   templateUrl: './teacher.component.html',
   styleUrls: ['./teacher.component.css'],
-  providers: [AddTeacherComponent, DeleteComponent]
+  providers: [AddTeacherComponent]
 })
 export class TeacherComponent implements OnInit {
 
@@ -22,7 +22,6 @@ export class TeacherComponent implements OnInit {
 
   constructor(private teacherService: TeacherService,
                public dialogAddTeacher: AddTeacherComponent,
-              public dialogDelete: DeleteComponent,
               public dialog: MatDialog) {
   }
 
@@ -74,6 +73,21 @@ export class TeacherComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
       this.logResFromPopup = result;
       console.log(` data: ${result}`)
+    })
+  }
+
+  openDeleteDialog() {
+    const dialogRef = this.dialog.open(DeleteComponent, {
+      width: '500px',
+      data: {
+        name: this.selectedTeacher.name,
+        id: this.selectedTeacher.id,
+      }
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      this.logResFromPopup = result;
+      console.log(` data: ${result}`);
+      this.getTeachers();
     })
   }
 }
