@@ -25,7 +25,8 @@ export class TeacherService {
     return this.http.put<Teacher>(`${this.apiServerUrl}/teacher/update`, teacher);
   }
 
-  public deleteTeacher(teacherId: Teacher): Observable<void> {
+  public deleteTeacher(teacherId: number): Observable<void> {
+    console.log(teacherId)
     return this.http.delete<void>(`${this.apiServerUrl}/teacher/delete/${teacherId}`);
   }
 }

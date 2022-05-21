@@ -1,0 +1,16 @@
+<h1>Teacher info</h1>
+
+<div *ngIf="receivedTeacher">
+  <img src="{{receivedTeacher.imgUrl}}" alt="1" style="width:200px;height:200px;"><img>
+  <h2>Name: {{receivedTeacher.name}}</h2>
+  <h2>Email:  {{receivedTeacher.email}}</h2>
+  <h2>Job Title: {{receivedTeacher.jobTitle}}</h2>
+  <h2>Phone: {{receivedTeacher.phone}}</h2>
+  <h2></h2>
+</div>
+
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close color="primary">Close</button>
+</mat-dialog-actions>
+
+
