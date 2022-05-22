@@ -39,8 +39,8 @@ export class AddTeacherComponent implements OnInit {
         this.dialog.closeAll();
 
       }, (error: HttpErrorResponse) => {
+        alert(error.message);
         this.dialog.closeAll();
-
       }
     )
   }

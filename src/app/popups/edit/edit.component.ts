@@ -1,5 +1,5 @@
 import {Component, Inject, OnInit} from '@angular/core';
-import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
+import {MAT_DIALOG_DATA, MatDialog, MatDialogRef} from "@angular/material/dialog";
 import {TeacherComponent} from "../../teacher/teacher.component";
 import {TeacherService} from "../../teacher/teacher.service";
 import {HttpErrorResponse} from "@angular/common/http";
@@ -18,7 +18,8 @@ export class EditComponent implements OnInit {
 
   constructor(public teacherService: TeacherService,
               public dialogRef: MatDialogRef<TeacherComponent>,
-              @Inject(MAT_DIALOG_DATA) public data: any,) {
+              @Inject(MAT_DIALOG_DATA) public data: any,
+              public dialog: MatDialog) {
     this.receivedTeacher = data;
   }
 
@@ -43,16 +44,14 @@ export class EditComponent implements OnInit {
        imgUrl: this.editTeacherForm.value.imgUrl,
        teacherCode: this.receivedTeacher.teacherCode
      }
-     console.log(resultUser)
 
     this.teacherService.updateTeacher(resultUser).subscribe(
       (response: Teacher) => {
         console.log(response);
-        // this.addTeacherForm.reset();
-        // this.dialog.closeAll();
+        this.dialog.closeAll();
       }, (error: HttpErrorResponse) => {
-        // this.dialog.closeAll();
         alert(error.message);
+        this.dialog.closeAll();
       }
     )
   }

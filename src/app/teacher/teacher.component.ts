@@ -45,6 +45,15 @@ export class TeacherComponent implements OnInit {
     this.selectedTeacher = teacher;
   }
 
+  openAddTeacherDialog() {
+    const dialogRef = this.dialog.open(AddTeacherComponent);
+    dialogRef.afterClosed().subscribe(result => {
+      this.logResFromPopup = result;
+      console.log(` data: ${result}`);
+      this.getTeachers();
+    })
+  }
+
   openShowInfoDialog() {
     const dialogRef = this.dialog.open(ShowInfoComponent, {
       width: '500px',
@@ -111,28 +120,5 @@ export class TeacherComponent implements OnInit {
       this.getTeachers();
     })
   }
-
-  openAddTeacherDialog() {
-    const dialogRef = this.dialog.open(AddTeacherComponent
-      // ,
-      // {
-      // width: '500px',
-      // data: {
-      //   id: this.selectedTeacher.id,
-      //   name: this.selectedTeacher.name,
-      //   email: this.selectedTeacher.email,
-      //   jobTitle: this.selectedTeacher.jobTitle,
-      //   phone: this.selectedTeacher.phone,
-      //   imgUrl: this.selectedTeacher.imgUrl,
-      //   teacherCode: this.selectedTeacher.teacherCode
-      // }}
-    );
-    dialogRef.afterClosed().subscribe(result => {
-      this.logResFromPopup = result;
-      console.log(` data: ${result}`);
-      this.getTeachers();
-    })
-  }
-
 
 }

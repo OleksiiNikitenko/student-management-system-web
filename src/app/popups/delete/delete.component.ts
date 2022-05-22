@@ -1,10 +1,7 @@
 import {Component, Inject, OnInit} from '@angular/core';
 import {TeacherService} from "../../teacher/teacher.service";
-import {MAT_DIALOG_DATA, MatDialog, MatDialogRef} from "@angular/material/dialog";
+import {MAT_DIALOG_DATA, MatDialog} from "@angular/material/dialog";
 import {HttpErrorResponse} from "@angular/common/http";
-import {Teacher} from "../../teacher/teacher";
-import {TeacherComponent} from "../../teacher/teacher.component";
-import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-delete',
@@ -12,13 +9,12 @@ import {Router} from "@angular/router";
   styleUrls: ['./delete.component.css']
 })
 export class DeleteComponent implements OnInit {
+
   receivedTeacher: any;
 
   constructor(public teacherService: TeacherService,
               @Inject(MAT_DIALOG_DATA) public data: any,
-              // public compTeach: TeacherComponent,
-              public router: Router
-              ) {
+              public dialog: MatDialog) {
     this.receivedTeacher = data;
   }
 
@@ -31,13 +27,11 @@ export class DeleteComponent implements OnInit {
     this.teacherService.deleteTeacher(this.receivedTeacher.id).subscribe(
       (response: void) => {
         console.log(response);
-        // this.compTeach.getTeachers();
-        // this.router.navigate(['/teacher']);
-
+        this.dialog.closeAll();
 
       }, (error: HttpErrorResponse) => {
-        // this.dialog.closeAll();
         alert(error.message);
+        this.dialog.closeAll();
       }
     )
   }
