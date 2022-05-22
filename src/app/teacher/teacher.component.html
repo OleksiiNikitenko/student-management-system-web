@@ -7,7 +7,7 @@
     <div class="title-teacher">
       <h1>Teachers info</h1>
 <!--      <a class="add-btn" href="#popup5">Add teacher</a>-->
-      <p class="add-btn" (click)="dialogAddTeacher.openDialog()">Add teacher</p>
+      <p class="add-btn" (click)="openAddTeacherDialog()">Add teacher</p>
     </div>
     <div class="teacher-card" *ngFor="let teacher of teachers">
       <img src="{{teacher?.imgUrl}}" alt="1">
@@ -132,14 +132,3 @@
     </div>
   </section>
 </header>
-
-
-<h2>From teacher</h2>
-<div *ngFor="let teacher of teachers">
-  <div>{{teacher?.name}}</div>
-  <div>{{teacher?.jobTitle}}</div>
-  <div>{{teacher?.email}}</div>
-  <div>{{teacher?.phone}}</div>
-  <div>{{teacher?.imgUrl}}</div>
-</div>
-

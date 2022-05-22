@@ -99,7 +99,8 @@ import {MatPaginatorModule} from "@angular/material/paginator";
   entryComponents: [ShowInfoComponent,
     EmailComponent,
     DeleteComponent,
-    EditComponent]
+    EditComponent,
+    AddTeacherComponent]
 })
 export class AppModule {
 }

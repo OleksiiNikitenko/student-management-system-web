@@ -22,7 +22,7 @@ export class TeacherComponent implements OnInit {
   public selectedTeacher: any;
 
   constructor(private teacherService: TeacherService,
-               public dialogAddTeacher: AddTeacherComponent,
+              public dialogAddTeacher: AddTeacherComponent,
               public dialog: MatDialog) {
   }
 
@@ -105,6 +105,28 @@ export class TeacherComponent implements OnInit {
         teacherCode: this.selectedTeacher.teacherCode
       }
     });
+    dialogRef.afterClosed().subscribe(result => {
+      this.logResFromPopup = result;
+      console.log(` data: ${result}`);
+      this.getTeachers();
+    })
+  }
+
+  openAddTeacherDialog() {
+    const dialogRef = this.dialog.open(AddTeacherComponent
+      // ,
+      // {
+      // width: '500px',
+      // data: {
+      //   id: this.selectedTeacher.id,
+      //   name: this.selectedTeacher.name,
+      //   email: this.selectedTeacher.email,
+      //   jobTitle: this.selectedTeacher.jobTitle,
+      //   phone: this.selectedTeacher.phone,
+      //   imgUrl: this.selectedTeacher.imgUrl,
+      //   teacherCode: this.selectedTeacher.teacherCode
+      // }}
+    );
     dialogRef.afterClosed().subscribe(result => {
       this.logResFromPopup = result;
       console.log(` data: ${result}`);
