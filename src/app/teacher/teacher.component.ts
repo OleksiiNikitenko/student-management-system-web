@@ -45,6 +45,21 @@ export class TeacherComponent implements OnInit {
     this.selectedTeacher = teacher;
   }
 
+  searchTeachers(key: string): void {
+    const results: Teacher[] = [];
+    for (const teacher of this.teachers) {
+      if (teacher.name.toLowerCase().indexOf(key.toLowerCase()) !== -1 ||
+        teacher.email.toLowerCase().indexOf(key.toLowerCase()) !== -1 ||
+        teacher.jobTitle.toLowerCase().indexOf(key.toLowerCase()) !== -1 ||
+        teacher.phone.toLowerCase().indexOf(key.toLowerCase()) !== -1)
+        results.push(teacher);
+    }
+    this.teachers = results;
+    if (results.length === 0 || !key) {
+      this.getTeachers();
+    }
+  }
+
   openAddTeacherDialog() {
     const dialogRef = this.dialog.open(AddTeacherComponent);
     dialogRef.afterClosed().subscribe(result => {

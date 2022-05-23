@@ -7,7 +7,9 @@
     <div class="title-teacher">
       <h1>Teachers info</h1>
 <!--      <a class="add-btn" href="#popup5">Add teacher</a>-->
+      <input matInput ngModel (ngModelChange)="searchTeachers(key.value)" #key="ngModel" type="search" placeholder="Search teacher">
       <p class="add-btn" (click)="openAddTeacherDialog()">Add teacher</p>
+
     </div>
     <div class="teacher-card" *ngFor="let teacher of teachers">
       <img src="{{teacher?.imgUrl}}" alt="1">
