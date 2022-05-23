@@ -1,5 +1,6 @@
-<div *ngIf="receivedTeacher">
+<div *ngIf="receivedTeacher" class="email-popup">
   <h1>Get in touch with {{receivedTeacher.name}}!</h1>
+  <hr>
   <h2>Send mail:
     <a href="mailto:{{receivedTeacher.email}}">{{receivedTeacher.email}}</a>
   </h2>

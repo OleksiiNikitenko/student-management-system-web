@@ -1,4 +1,4 @@
-/* You can add global styles to this file, and also import other style files */
+/*You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap');
 
 * {
@@ -9,6 +9,7 @@
 
 html, body {
   overflow-x: hidden;
+  font-family: 'Quicksand', sans-serif;
 }
 
 a {
@@ -22,7 +23,8 @@ ul li {
 /* HEADER SECTION */
 header {
   width: 100%;
-  font-family: 'Quicksand', sans-serif;
+  /*font-family: 'Quicksand', sans-serif;*/
+
 }
 
 header .navigation-bar {
@@ -41,10 +43,12 @@ header .navigation-bar .logo {
   align-items: center;
   justify-content: space-between;
   position: relative;
+  margin: 20px 0;
 }
 
 header .navigation-bar .logo h1 {
-  font-size: 2.6rem;
+  font-size: 2.3rem;
+  line-height: 40px;
   font-weight: 900;
   color: rgb(255, 255, 255);
   margin: 10px 30px;
@@ -62,6 +66,7 @@ header .navigation-bar .logo h3 {
   margin: 0 50px;
   position: relative;
   cursor: pointer;
+
 }
 
 .dropdown-content {
@@ -76,6 +81,7 @@ header .navigation-bar .logo h3 {
   z-index: 1;
   border-radius: 10px;
   transition: all 0.5s ease;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .dropdown-content ul li a {
@@ -87,6 +93,10 @@ header .navigation-bar .logo h3 {
 .drop {
   position: relative;
   transition: all 0.5s ease;
+}
+
+.drop h3 {
+  font-family: 'Quicksand', sans-serif;
 }
 
 .drop:hover .dropdown-content {
@@ -119,15 +129,15 @@ header .navigation-bar .menu-right span {
   cursor: pointer;
   font-size: 40px;
   position: absolute;
-  top: 10px;
-  right: 80px;
+  top: 25px;
+  right: 85px;
   color: rgb(255, 247, 0);
 }
 
 .menu-right .dropdown-acount {
   display: none;
   position: absolute;
-  top: 56px;
+  top: 53px;
   right: 40px;
   background-color: #ffffff;
   width: 160px;
@@ -142,6 +152,7 @@ header .navigation-bar .menu-right span {
   font-size: 20px;
   margin-bottom: 20px;
   color: rgb(0, 35, 208);
+  font-family: 'Quicksand', sans-serif;
 }
 
 .drop-account {
@@ -160,18 +171,20 @@ header .navigation-bar .menu-right span {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  /*font-family: 'Quicksand', sans-serif;*/
 }
 
 
 .main-page .logo-main {
   /* background-color: aqua; */
   width: 45%;
-
 }
 
 .main-page .logo-main h1 {
   text-align: center;
   font-size: 3.5rem;
+  line-height: 60px;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .main-page .logo-main img {
@@ -211,29 +224,36 @@ ACCOUNT PAGE  */
 
 .account-page .info-box .main-info-box {
   margin: 20px;
-  width: 50%;
+  width: 100%;
 }
-.account-page .info-box .main-info-box h1{
-  font-size: 2.5rem;
+
+.account-page .info-box .main-info-box h1 {
+  font-size: 2rem;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .account-page .info-box .main-info-box h5 {
   font-size: 1rem;
+  font-family: 'Quicksand', sans-serif;
 }
-.account-page .info-box .main-info-box h3 {
+
+.account-page .info-box .main-info-box p {
   font-size: 1.5rem;
-  line-height: 50px;
+  line-height: 30px;
+  font-family: 'Quicksand', sans-serif;
 }
-.account-page .info-box .main-info-box span{
-  font-size: 1.7rem;
-  font-weight: 100;
-}
+
+/*.account-page .info-box .main-info-box span{*/
+/*  font-size: 1.7rem;*/
+/*  font-weight: 100;*/
+/*  font-family: 'Quicksand', sans-serif;*/
+/*}*/
 
 .account-page .info-box .edit-box {
   display: flex;
   flex-direction: column;
   width: 30%;
-  margin: 0px 90px;
+  margin: 20px 90px;
   border: 20px solid transparent;
   outline: 5px solid black;
   border-radius: 10px;
@@ -248,22 +268,72 @@ ACCOUNT PAGE  */
   font-size: 1.5rem;
   border-radius: 10px;
   cursor: pointer;
+  font-family: 'Quicksand', sans-serif;
+  transition: all 0.5s ease;
+
 }
 
+.account-page .info-box .edit-box button:hover {
+  color: white;
+  background-color: rgba(0, 35, 208, 0.75);
+  transform: translateY(-15px);
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+}
 
 /* TEACHER MANAGE */
-
-svg{
+svg {
   width: 15%;
+  transition: all 0.3s linear;
 }
 
-.teacher-management .title-teacher{
+
+.teacher-management {
+  overflow: hidden;
+}
+
+/*teacher-card*/
+.teacher-management .title-teacher {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.teacher-management .title-teacher h1{
+.teacher-management .title-teacher h1 {
+  font-family: 'Quicksand', sans-serif;
+}
+
+.teacher-management .title-teacher .search-box {
+  margin: 50px 50px;
+}
+
+.teacher-management .title-teacher .search-box input {
+  border: 1px solid black;
+  padding: 15px;
+  font-size: 1.4rem;
+  font-family: 'Quicksand', sans-serif;
+  border-radius: 10px;
+  width: 300px;
+}
+
+.teacher-management .title-teacher .search-box .add-btn {
+  font-size: 1.4rem;
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
+  font-family: 'Quicksand', sans-serif;
+  border-radius: 10px;
+  transition: all 0.5s ease;
+}
+
+.teacher-management .title-teacher .search-box .add-btn:hover {
+  color: white;
+  background-color: rgba(0, 35, 208, 0.75);
+  transform: translateY(-15px);
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.teacher-management .title-teacher h1 {
   font-size: 3rem;
   margin: 50px 30px;
 }
@@ -283,15 +353,22 @@ svg{
   background-color: rgb(118, 255, 118);
 }
 
-.teacher-management .teacher-card{
+.teacher-management .teacher-card {
   /* background-color: aquamarine; */
   display: flex;
   width: 90%;
   margin: 20px auto;
   border: 2px solid black;
+  transition: all 0.4s ease;
 
 }
-.teacher-management .teacher-card img{
+
+.teacher-management .teacher-card:hover {
+  transform: scale(1.05);
+}
+
+
+.teacher-management .teacher-card img {
   margin: 30px;
   border-radius: 50%;
   width: 6%;
@@ -304,7 +381,12 @@ svg{
   font-size: 1.2rem;
   line-height: 50px;
 }
-.teacher-management .teacher-card .menu-box{
+
+.teacher-management .teacher-card .teacher-info h2 {
+  font-family: 'Quicksand', sans-serif;
+}
+
+.teacher-management .teacher-card .menu-box {
   width: 60%;
   margin: 30px;
   display: flex;
@@ -318,7 +400,23 @@ svg{
   padding: 5px;
   margin: 20px;
   font-size: 1.5rem;
+  transition: all 0.3s linear;
+  border-radius: 10px;
 }
+
+
+.teacher-management .teacher-card .menu-box a:hover {
+  color: white;
+  background-color: rgba(0, 35, 208, 0.75);
+  transform: scale(1.09);
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.teacher-management .teacher-card .menu-box a:hover svg path, a:hover {
+  fill: white;
+}
+
 
 /* TEACHER POPUPS */
 .overlay {
@@ -441,5 +539,5 @@ svg{
   margin-top: 20px;
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+/*html, body { height: 100%; }*/
+/*body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }*/

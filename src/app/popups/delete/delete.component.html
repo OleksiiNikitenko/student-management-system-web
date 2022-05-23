@@ -1,9 +1,9 @@
 
-<div *ngIf="receivedTeacher">
-  <h2>Do you want to delete teacher {{receivedTeacher.name}}?</h2>
+<div *ngIf="receivedTeacher" class="delete-btn">
+  <h1>Do you want to delete teacher {{receivedTeacher.name}}?</h1>
 </div>
 
 <mat-dialog-actions align="end">
-  <button mat-button mat-dialog-close color="primary">Cancel</button>
-  <button (click)="deleteTeacher()" mat-button mat-dialog-close color="warn">Delete</button>
+  <button mat-button mat-dialog-close color="primary" id="cancle-btn">Cancel</button>
+  <button (click)="deleteTeacher()" mat-button mat-dialog-close color="warn" id="delete-butun">Delete</button>
 </mat-dialog-actions>
