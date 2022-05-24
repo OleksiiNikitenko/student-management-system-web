@@ -8,10 +8,14 @@
       <h1>Teachers info</h1>
       <div class="search-box">
         <p class="add-btn" (click)="openAddTeacherDialog()">Add teacher</p>
-        <input matInput ngModel (ngModelChange)="searchTeachers(key.value)" #key="ngModel" type="search"
+        <input id="search" matInput ngModel (ngModelChange)="searchTeachers(key.value)" #key="ngModel" type="search"
                placeholder="Search teacher">
       </div>
     </div>
+    <div [ngClass]="key.value === ''? 'disappear' : 'appear'"  *ngIf="teachers?.length == 0 || this.isFoundTeacher"  >
+      <h4>No teachers found...</h4>
+    </div>
+
     <div class="teacher-card" *ngFor="let teacher of teachers">
       <img src="{{teacher?.imgUrl}}" alt="1">
       <div class="teacher-info">

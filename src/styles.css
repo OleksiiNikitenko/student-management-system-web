@@ -541,3 +541,16 @@ svg {
 
 /*html, body { height: 100%; }*/
 /*body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }*/
+
+.appear h4{
+  font-size: 20px;
+  font-family: 'Quicksand', sans-serif;
+  margin-left: 35px;
+}
+
+.disappear h4{
+  font-size: 20px;
+  font-family: 'Quicksand', sans-serif;
+  margin-left: 35px;
+  display: none;
+}

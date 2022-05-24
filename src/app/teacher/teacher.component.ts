@@ -20,6 +20,7 @@ export class TeacherComponent implements OnInit {
   public teachers: Teacher[] = [];
   public logResFromPopup: any;
   public selectedTeacher: any;
+  public isFoundTeacher: boolean = false;
 
   constructor(private teacherService: TeacherService,
               public dialogAddTeacher: AddTeacherComponent,
@@ -47,6 +48,7 @@ export class TeacherComponent implements OnInit {
 
   searchTeachers(key: string): void {
     const results: Teacher[] = [];
+    this.isFoundTeacher = false;
     for (const teacher of this.teachers) {
       if (teacher.name.toLowerCase().indexOf(key.toLowerCase()) !== -1 ||
         teacher.email.toLowerCase().indexOf(key.toLowerCase()) !== -1 ||
@@ -56,7 +58,8 @@ export class TeacherComponent implements OnInit {
     }
     this.teachers = results;
     if (results.length === 0 || !key) {
-      this.getTeachers();
+       this.getTeachers();
+      this.isFoundTeacher = true;
     }
   }
 
