@@ -5,6 +5,7 @@ import {MatDialog} from "@angular/material/dialog";
 import {HttpErrorResponse} from "@angular/common/http";
 import {AddStudentComponent} from "../popups/student/add-student/add-student.component";
 import {ShowInfoStudentComponent} from "../popups/student/show-info-student/show-info-student.component";
+import {EditStudentComponent} from "../popups/student/edit-student/edit-student.component";
 
 @Component({
   selector: 'app-students',
@@ -81,8 +82,30 @@ export class StudentsComponent implements OnInit {
         imgUrl: this.selectedStudent.imgUrl
       }
     });
-
   }
 
+  openEditDialog() {
+    const dialogRef = this.dialog.open(EditStudentComponent, {
+      width: '500px',
+      data: {
+        id: this.selectedStudent.id,
+        name: this.selectedStudent.name,
+        faculty: this.selectedStudent.faculty,
+        studyYear: this.selectedStudent.studyYear,
+        grade: this.selectedStudent.grade,
+        groupName: this.selectedStudent.groupName,
+        appRole: this.selectedStudent.appRole,
+        email: this.selectedStudent.email,
+        reserveEmail: this.selectedStudent.reserveEmail,
+        phone: this.selectedStudent.phone,
+        imgUrl: this.selectedStudent.imgUrl,
+        studentCode: this.selectedStudent.studentCode
+      }
+    });
+    dialogRef.afterClosed().subscribe(result => {
 
+      console.log(` data: ${result}`);
+      this.getStudents();
+    })
+  }
 }
