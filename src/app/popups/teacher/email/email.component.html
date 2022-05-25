@@ -4,7 +4,7 @@
   <h2>Send mail:
     <a href="mailto:{{receivedUser.email}}">{{receivedUser.email}}</a>
   </h2>
-  <div [ngClass]="receivedUser.hasOwnProperty('reserveEmail')? 'appear' : 'disappear'">
+  <div [ngClass]="receivedUser.hasOwnProperty('reserveEmail')? 'appear' : 'disappear'" id="send-mail-div">
     <h2>Send mail to reserve email:
       <a href="mailto:{{receivedUser.reserveEmail}}">{{receivedUser.reserveEmail}}</a>
     </h2>

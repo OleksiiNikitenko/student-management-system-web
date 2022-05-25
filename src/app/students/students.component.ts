@@ -87,7 +87,6 @@ export class StudentsComponent implements OnInit {
 
   openEditDialog() {
     const dialogRef = this.dialog.open(EditStudentComponent, {
-      width: '500px',
       data: {
         id: this.selectedStudent.id,
         name: this.selectedStudent.name,
