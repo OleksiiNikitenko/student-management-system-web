@@ -1,6 +1,5 @@
 import {Component, Inject, OnInit} from '@angular/core';
-import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
-import {TeacherComponent} from "../../../teacher/teacher.component";
+import {MAT_DIALOG_DATA} from "@angular/material/dialog";
 
 @Component({
   selector: 'app-email',
@@ -9,10 +8,9 @@ import {TeacherComponent} from "../../../teacher/teacher.component";
 })
 export class EmailComponent implements OnInit {
   receivedUser: any;
-  
 
-  constructor(public dialogRef: MatDialogRef<TeacherComponent>,
-              @Inject(MAT_DIALOG_DATA) public data: any,) {
+
+  constructor(@Inject(MAT_DIALOG_DATA) public data: any,) {
     this.receivedUser = data;
   }
 

@@ -12,18 +12,15 @@ import {EditComponent} from "../popups/teacher/edit/edit.component";
 @Component({
   selector: 'app-teacher',
   templateUrl: './teacher.component.html',
-  styleUrls: ['./teacher.component.css'],
-  providers: [AddTeacherComponent]
+  styleUrls: ['./teacher.component.css']
 })
 export class TeacherComponent implements OnInit {
 
   public teachers: Teacher[] = [];
-  public logResFromPopup: any;
   public selectedTeacher: any;
   public isFoundTeacher: boolean = false;
 
   constructor(private teacherService: TeacherService,
-              public dialogAddTeacher: AddTeacherComponent,
               public dialog: MatDialog) {
   }
 
@@ -66,7 +63,6 @@ export class TeacherComponent implements OnInit {
   openAddTeacherDialog() {
     const dialogRef = this.dialog.open(AddTeacherComponent);
     dialogRef.afterClosed().subscribe(result => {
-      this.logResFromPopup = result;
       console.log(` data: ${result}`);
       this.getTeachers();
     })
@@ -84,7 +80,6 @@ export class TeacherComponent implements OnInit {
       }
     });
     dialogRef.afterClosed().subscribe(result => {
-      this.logResFromPopup = result;
       console.log(` data: ${result}`)
     })
   }
@@ -99,7 +94,6 @@ export class TeacherComponent implements OnInit {
       }
     });
     dialogRef.afterClosed().subscribe(result => {
-      this.logResFromPopup = result;
       console.log(` data: ${result}`)
     })
   }
@@ -113,7 +107,6 @@ export class TeacherComponent implements OnInit {
       }
     });
     dialogRef.afterClosed().subscribe(result => {
-      this.logResFromPopup = result;
       console.log(` data: ${result}`);
       this.getTeachers();
     })
@@ -133,8 +126,6 @@ export class TeacherComponent implements OnInit {
       }
     });
     dialogRef.afterClosed().subscribe(result => {
-      this.logResFromPopup = result;
-
       console.log(` data: ${result}`);
       this.getTeachers();
     })

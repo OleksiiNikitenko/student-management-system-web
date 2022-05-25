@@ -17,7 +17,6 @@ export class EditComponent implements OnInit {
   editTeacherForm: FormGroup | any;
 
   constructor(public teacherService: TeacherService,
-              public dialogRef: MatDialogRef<TeacherComponent>,
               @Inject(MAT_DIALOG_DATA) public data: any,
               public dialog: MatDialog) {
     this.receivedTeacher = data;

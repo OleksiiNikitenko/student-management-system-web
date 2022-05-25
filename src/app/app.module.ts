@@ -26,7 +26,6 @@ import {MatDialogModule} from "@angular/material/dialog";
 import {MatInputModule} from "@angular/material/input";
 import {MatButtonModule} from "@angular/material/button";
 import {MatTableModule} from "@angular/material/table";
-import {MatSortModule} from "@angular/material/sort";
 import {MatPaginatorModule} from "@angular/material/paginator";
 import {AddStudentComponent} from './popups/student/add-student/add-student.component';
 import {EditStudentComponent} from './popups/student/edit-student/edit-student.component';
@@ -65,14 +64,8 @@ import { DeleteStudentComponent } from './popups/student/delete-student/delete-s
     FormsModule,
     MatIconModule,
     MatTableModule,
-    // MatSortModule,
     ReactiveFormsModule,
     MatPaginatorModule,
-    // MatRadioModule,
-    // MatSelectModule,
-    // MatAutocompleteModule,
-    // MatExpansionModule,
-    // MatCheckboxModule,
     RouterModule.forRoot([
       {
         path: '',
@@ -90,10 +83,7 @@ import { DeleteStudentComponent } from './popups/student/delete-student/delete-s
         path: 'accountInfo',
         component: AccountInfoComponent
       },
-
       // {path: 'profile/:id', component: TeacherProfile},
-
-
     ]),
     ReactiveFormsModule,
     MatCardModule,

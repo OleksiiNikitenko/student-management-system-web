@@ -7,7 +7,6 @@ import {AddStudentComponent} from "../popups/student/add-student/add-student.com
 import {ShowInfoStudentComponent} from "../popups/student/show-info-student/show-info-student.component";
 import {EditStudentComponent} from "../popups/student/edit-student/edit-student.component";
 import {EmailComponent} from "../popups/teacher/email/email.component";
-import {DeleteComponent} from "../popups/teacher/delete/delete.component";
 import {DeleteStudentComponent} from "../popups/student/delete-student/delete-student.component";
 
 @Component({
@@ -63,14 +62,13 @@ export class StudentsComponent implements OnInit {
   openAddStudentDialog() {
     const dialogRef = this.dialog.open(AddStudentComponent);
     dialogRef.afterClosed().subscribe(result => {
-      //this.logResFromPopup = result;
       console.log(` data: ${result}`);
       this.getStudents();
     })
   }
 
   openShowInfoDialog() {
-    const dialog = this.dialog.open(ShowInfoStudentComponent, {
+    this.dialog.open(ShowInfoStudentComponent, {
       width: '500px',
       data: {
         name: this.selectedStudent.name,
@@ -106,7 +104,6 @@ export class StudentsComponent implements OnInit {
       }
     });
     dialogRef.afterClosed().subscribe(result => {
-
       console.log(` data: ${result}`);
       this.getStudents();
     })

@@ -17,7 +17,6 @@ export class EditStudentComponent implements OnInit {
 
 
   constructor(public studentService: StudentService,
-              public dialogRef: MatDialogRef<StudentsComponent>,
               @Inject(MAT_DIALOG_DATA) public data: any,
               public dialog: MatDialog) {
     this.receivedStudent = data;

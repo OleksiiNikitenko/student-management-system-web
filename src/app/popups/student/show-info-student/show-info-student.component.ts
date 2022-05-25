@@ -11,8 +11,7 @@ export class ShowInfoStudentComponent implements OnInit {
 
   receivedStudent: any;
 
-  constructor(public dialogRef: MatDialogRef<TeacherComponent>,
-              @Inject(MAT_DIALOG_DATA) public data: any) {
+  constructor(@Inject(MAT_DIALOG_DATA) public data: any) {
     this.receivedStudent = data;
   }
 
