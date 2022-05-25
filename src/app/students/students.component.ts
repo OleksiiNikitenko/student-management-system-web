@@ -4,6 +4,7 @@ import {StudentService} from "./student.service";
 import {MatDialog} from "@angular/material/dialog";
 import {HttpErrorResponse} from "@angular/common/http";
 import {AddStudentComponent} from "../popups/student/add-student/add-student.component";
+import {ShowInfoStudentComponent} from "../popups/student/show-info-student/show-info-student.component";
 
 @Component({
   selector: 'app-students',
@@ -62,6 +63,25 @@ export class StudentsComponent implements OnInit {
       console.log(` data: ${result}`);
       this.getStudents();
     })
+  }
+
+  openShowInfoDialog() {
+    const dialog = this.dialog.open(ShowInfoStudentComponent, {
+      width: '500px',
+      data: {
+        name: this.selectedStudent.name,
+        faculty: this.selectedStudent.faculty,
+        studyYear: this.selectedStudent.studyYear,
+        grade: this.selectedStudent.grade,
+        groupName: this.selectedStudent.groupName,
+        appRole: this.selectedStudent.appRole,
+        email: this.selectedStudent.email,
+        reserveEmail: this.selectedStudent.reserveEmail,
+        phone: this.selectedStudent.phone,
+        imgUrl: this.selectedStudent.imgUrl
+      }
+    });
+
   }
 
 
