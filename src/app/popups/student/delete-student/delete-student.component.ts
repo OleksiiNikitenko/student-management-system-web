@@ -1,30 +1,31 @@
 import {Component, Inject, OnInit} from '@angular/core';
-import {TeacherService} from "../../../teacher/teacher.service";
 import {MAT_DIALOG_DATA, MatDialog} from "@angular/material/dialog";
+import {StudentService} from "../../../students/student.service";
 import {HttpErrorResponse} from "@angular/common/http";
 
 @Component({
-  selector: 'app-delete',
-  templateUrl: './delete.component.html',
-  styleUrls: ['./delete.component.css']
+  selector: 'app-delete-student',
+  templateUrl: './delete-student.component.html',
+  styleUrls: ['./delete-student.component.css']
 })
-export class DeleteComponent implements OnInit {
+export class DeleteStudentComponent implements OnInit {
 
-  receivedUser: any;
+  receivedStudent: any;
 
-  constructor(public teacherService: TeacherService,
+  constructor(public studentService: StudentService,
               @Inject(MAT_DIALOG_DATA) public data: any,
               public dialog: MatDialog) {
-    this.receivedUser = data;
+    this.receivedStudent = data;
+
   }
 
   ngOnInit(): void {
   }
 
-  deleteUser() {
-    console.log(this.receivedUser.id)
+  deleteStudent() {
+    console.log(this.receivedStudent.id)
 
-    this.teacherService.deleteTeacher(this.receivedUser.id).subscribe(
+    this.studentService.deleteStudent(this.receivedStudent.id).subscribe(
       (response: void) => {
         console.log(response);
         this.dialog.closeAll();
@@ -35,4 +36,5 @@ export class DeleteComponent implements OnInit {
       }
     )
   }
+
 }

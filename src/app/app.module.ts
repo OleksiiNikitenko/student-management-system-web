@@ -31,6 +31,7 @@ import {MatPaginatorModule} from "@angular/material/paginator";
 import {AddStudentComponent} from './popups/student/add-student/add-student.component';
 import {EditStudentComponent} from './popups/student/edit-student/edit-student.component';
 import {ShowInfoStudentComponent} from './popups/student/show-info-student/show-info-student.component';
+import { DeleteStudentComponent } from './popups/student/delete-student/delete-student.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import {ShowInfoStudentComponent} from './popups/student/show-info-student/show-
     DeleteComponent,
     AddStudentComponent,
     EditStudentComponent,
-    ShowInfoStudentComponent
+    ShowInfoStudentComponent,
+    DeleteStudentComponent
   ],
   imports: [
     BrowserModule,
@@ -102,12 +104,16 @@ import {ShowInfoStudentComponent} from './popups/student/show-info-student/show-
   ],
   providers: [TeacherService],
   bootstrap: [AppComponent],
-  entryComponents: [ShowInfoComponent,
+  entryComponents: [
+    ShowInfoComponent,
     EmailComponent,
     DeleteComponent,
     EditComponent,
     AddTeacherComponent,
-    AddStudentComponent]
+    AddStudentComponent,
+    ShowInfoStudentComponent,
+    EditStudentComponent
+  ]
 })
 export class AppModule {
 }

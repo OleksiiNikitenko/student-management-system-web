@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {StudentService} from "../../../students/student.service";
 import {MatDialog} from "@angular/material/dialog";
@@ -15,7 +15,8 @@ export class AddStudentComponent implements OnInit {
   addStudentForm: FormGroup | any;
 
   constructor(public studentService: StudentService,
-              public dialog: MatDialog) { }
+              public dialog: MatDialog) {
+  }
 
   ngOnInit(): void {
     this.addStudentForm = new FormGroup(

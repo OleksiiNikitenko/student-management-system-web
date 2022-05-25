@@ -554,3 +554,16 @@ svg {
   margin-left: 35px;
   display: none;
 }
+
+.appear h2{
+  font-size: 20px;
+  font-family: 'Quicksand', sans-serif;
+  margin-left: 35px;
+}
+
+.disappear h2{
+  font-size: 20px;
+  font-family: 'Quicksand', sans-serif;
+  margin-left: 35px;
+  display: none;
+}

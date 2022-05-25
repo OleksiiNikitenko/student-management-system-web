@@ -1,11 +1,16 @@
-<div *ngIf="receivedTeacher" class="email-popup">
-  <h1>Get in touch with {{receivedTeacher.name}}!</h1>
+<div *ngIf="receivedUser" class="email-popup">
+  <h1>Get in touch with {{receivedUser.name}}!</h1>
   <hr>
   <h2>Send mail:
-    <a href="mailto:{{receivedTeacher.email}}">{{receivedTeacher.email}}</a>
+    <a href="mailto:{{receivedUser.email}}">{{receivedUser.email}}</a>
   </h2>
+  <div [ngClass]="receivedUser.hasOwnProperty('reserveEmail')? 'appear' : 'disappear'">
+    <h2>Send mail to reserve email:
+      <a href="mailto:{{receivedUser.reserveEmail}}">{{receivedUser.reserveEmail}}</a>
+    </h2>
+  </div>
   <h2>Call phone:
-    <a href="tel:{{receivedTeacher.phone}}">{{receivedTeacher.phone}}</a>
+    <a href="tel:{{receivedUser.phone}}">{{receivedUser.phone}}</a>
   </h2>
 </div>
 
