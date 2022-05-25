@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {MatDialog} from "@angular/material/dialog";
 import {FormControl, FormGroup, Validators} from "@angular/forms";
-import {TeacherService} from "../../teacher/teacher.service";
-import {Teacher} from "../../teacher/teacher";
+import {TeacherService} from "../../../teacher/teacher.service";
+import {Teacher} from "../../../teacher/teacher";
 import {HttpErrorResponse} from "@angular/common/http";
 
 @Component({

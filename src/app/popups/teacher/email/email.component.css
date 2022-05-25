@@ -1,0 +1,35 @@
+.email-popup h1 {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 2rem;
+}
+
+.email-popup h2 {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.5rem;
+}
+
+hr {
+  margin: 20px 0;
+}
+
+.mat-button {
+  color: black;
+  text-align: center;
+  border: 1px solid black;
+  padding: 5px 20px;
+  /*margin: 20px;*/
+  font-size: 1.5rem;
+  transition: all 0.3s linear;
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+.mat-button:hover {
+  color: white;
+  background-color: rgba(0, 35, 208, 0.75);
+  transform: scale(1.09);
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+}
+#send-mail-div h2{
+  margin: 20px 0;
+}

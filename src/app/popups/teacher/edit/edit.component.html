@@ -4,50 +4,51 @@
 
       <mat-card-title>Edit teacher {{receivedTeacher.name}}</mat-card-title>
     </mat-card-header>
-
     <mat-card-content>
       <mat-tab-group>
         <form [formGroup]="editTeacherForm">
           <mat-tab label="Edit Teacher's Data">
             <mat-form-field class="example-full-width" appearance="fill">
               <mat-label>Name</mat-label>
-              <input ngModel="{{receivedTeacher.name}}" formControlName="name" type="text" matInput placeholder="input name" value=""/>
-              <mat-icon matSuffix>name</mat-icon>
+              <input ngModel="{{receivedTeacher.name}}" formControlName="name" type="text" matInput
+                     placeholder="input name" value=""/>
             </mat-form-field>
 
             <mat-form-field class="example-full-width" appearance="fill">
               <mat-label>Email</mat-label>
-              <input ngModel="{{receivedTeacher.email}}" formControlName="email" type="email" matInput placeholder="input email" value=""/>
-              <mat-icon matSuffix>email</mat-icon>
+              <input ngModel="{{receivedTeacher.email}}" formControlName="email" type="email" matInput
+                     placeholder="input email" value=""/>
             </mat-form-field>
 
             <mat-form-field class="example-full-width" appearance="fill">
               <mat-label>Job Title</mat-label>
-              <input ngModel="{{receivedTeacher.jobTitle}}" formControlName="jobTitle" type="text" matInput placeholder="input job title" value=""/>
-              <mat-icon matSuffix>name</mat-icon>
+              <input ngModel="{{receivedTeacher.jobTitle}}" formControlName="jobTitle" type="text" matInput
+                     placeholder="input job title" value=""/>
             </mat-form-field>
 
             <mat-form-field class="example-full-width" appearance="fill">
               <mat-label>Phone</mat-label>
-              <input ngModel="{{receivedTeacher.phone}}" formControlName="phone" type="tel" matInput placeholder="input phone" value=""/>
-              <mat-icon matSuffix>name</mat-icon>
+              <input ngModel="{{receivedTeacher.phone}}" formControlName="phone" type="tel" matInput
+                     placeholder="input phone" value=""/>
             </mat-form-field>
 
             <mat-form-field class="example-full-width" appearance="fill">
               <mat-label>ImgUrl</mat-label>
-              <input ngModel="{{receivedTeacher.imgUrl}}" formControlName="imgUrl" type="text" matInput placeholder="input imgUrl" value=""/>
-              <mat-icon matSuffix>name</mat-icon>
+              <input ngModel="{{receivedTeacher.imgUrl}}" formControlName="imgUrl" type="text" matInput
+                     placeholder="input imgUrl" value=""/>
             </mat-form-field>
 
-            <mat-card-subtitle>Please enter credetials</mat-card-subtitle>
           </mat-tab>
         </form>
       </mat-tab-group>
 
     </mat-card-content>
     <mat-card-actions align="end">
+
+      <button [disabled]="editTeacherForm.invalid" mat-button mat-dialog-close color="accent" (click)="updateTeacher()"
+              id="update-btn">Update
+      </button>
       <button mat-button mat-dialog-close color="primary">Cancel</button>
-      <button [disabled]="editTeacherForm.invalid" mat-button mat-dialog-close color="accent" (click)="updateTeacher()">Update</button>
     </mat-card-actions>
   </div>
 </div>

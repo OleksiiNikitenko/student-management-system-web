@@ -1,0 +1,85 @@
+<div class="center-content">
+  <div class="example-card">
+    <mat-card-header>
+
+      <mat-card-title>Edit Student {{receivedStudent.name}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-tab-group>
+        <form [formGroup]="editStudentForm">
+          <mat-tab label="Edit Student's Data">
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Name</mat-label>
+              <input ngModel="{{receivedStudent.name}}" formControlName="name" type="text" matInput
+                     placeholder="input name" value=""/>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Faculty</mat-label>
+              <input ngModel="{{receivedStudent.faculty}}" formControlName="faculty" type="text" matInput
+                     placeholder="input faculty" value=""/>
+            </mat-form-field>
+            <br>
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Study Year</mat-label>
+              <input ngModel="{{receivedStudent.studyYear}}" formControlName="studyYear" type="text" matInput
+                     placeholder="input study year" value=""/>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Group Name</mat-label>
+              <input ngModel="{{receivedStudent.groupName}}" formControlName="groupName" type="text" matInput
+                     placeholder="input group name" value=""/>
+            </mat-form-field>
+            <br>
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Grade</mat-label>
+              <input ngModel="{{receivedStudent.grade}}" formControlName="grade" type="text" matInput
+                     placeholder="input grade" value=""/>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>App Role</mat-label>
+              <input ngModel="{{receivedStudent.appRole}}" formControlName="appRole" type="text" matInput
+                     placeholder="input app role" value=""/>
+            </mat-form-field>
+            <br>
+
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Email</mat-label>
+              <input ngModel="{{receivedStudent.email}}" formControlName="email" type="email" matInput
+                     placeholder="input email" value=""/>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Reserve Email</mat-label>
+              <input ngModel="{{receivedStudent.reserveEmail}}" formControlName="reserveEmail" type="email" matInput
+                     placeholder="input reserve email" value=""/>
+            </mat-form-field>
+            <br>
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Phone</mat-label>
+              <input ngModel="{{receivedStudent.phone}}" formControlName="phone" type="tel" matInput
+                     placeholder="input phone" value=""/>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>ImgUrl</mat-label>
+              <input ngModel="{{receivedStudent.imgUrl}}" formControlName="imgUrl" type="text" matInput
+                     placeholder="input imgUrl" value=""/>
+            </mat-form-field>
+
+          </mat-tab>
+        </form>
+      </mat-tab-group>
+
+    </mat-card-content>
+    <mat-card-actions align="end">
+
+      <button [disabled]="editStudentForm.invalid" mat-button mat-dialog-close color="accent" (click)="updateStudent()"
+              id="update-btn">Update
+      </button>
+      <button mat-button mat-dialog-close color="primary">Cancel</button>
+    </mat-card-actions>
+  </div>
+</div>

@@ -12,35 +12,28 @@
             <mat-form-field class="example-full-width" appearance="fill">
               <mat-label>Name</mat-label>
               <input formControlName="name" type="text" matInput placeholder="input name" value=""/>
-              <mat-icon matSuffix>name</mat-icon>
             </mat-form-field>
 
             <mat-form-field class="example-full-width" appearance="fill">
               <mat-label>Email</mat-label>
               <input formControlName="email" type="email" matInput placeholder="input email" value=""/>
-              <mat-icon matSuffix>email</mat-icon>
             </mat-form-field>
 
             <mat-form-field class="example-full-width" appearance="fill">
               <mat-label>Job Title</mat-label>
               <input formControlName="jobTitle" type="text" matInput placeholder="input job title" value=""/>
-              <mat-icon matSuffix>name</mat-icon>
             </mat-form-field>
 
             <mat-form-field class="example-full-width" appearance="fill">
               <mat-label>Phone</mat-label>
               <input formControlName="phone" type="tel" matInput placeholder="input phone" value=""/>
-              <mat-icon matSuffix>name</mat-icon>
             </mat-form-field>
 
             <mat-form-field class="example-full-width" appearance="fill">
               <mat-label>ImgUrl</mat-label>
               <input formControlName="imgUrl" type="text" matInput placeholder="input imgUrl" value=""/>
-              <mat-icon matSuffix>name</mat-icon>
             </mat-form-field>
 
-            <mat-card-subtitle>Please enter credetials
-            </mat-card-subtitle>
           </mat-tab>
         </form>
       </mat-tab-group>
@@ -48,8 +41,10 @@
 
     </mat-card-content>
     <mat-card-actions>
+      <button [disabled]="addTeacherForm.invalid" mat-dialog-close mat-button color="primary" (click)="addTeacher()"
+              id="add-teacher-btn">Add Teacher
+      </button>
       <button mat-button mat-dialog-close color="primary">Cancel</button>
-      <button [disabled]="addTeacherForm.invalid" mat-dialog-close mat-button color="primary" (click)="addTeacher()">Add Teacher</button>
     </mat-card-actions>
   </div>
 </div>

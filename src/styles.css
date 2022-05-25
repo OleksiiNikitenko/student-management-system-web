@@ -1,5 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
+/*You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -8,19 +9,22 @@
 
 html, body {
   overflow-x: hidden;
+  font-family: 'Quicksand', sans-serif;
 }
 
 a {
   text-decoration: none;
 }
-ul li{
+
+ul li {
   list-style: none;
 }
-/* HEADER SECTION */
 
+/* HEADER SECTION */
 header {
   width: 100%;
-  font-family: 'Quicksand', sans-serif;
+  /*font-family: 'Quicksand', sans-serif;*/
+
 }
 
 header .navigation-bar {
@@ -39,27 +43,30 @@ header .navigation-bar .logo {
   align-items: center;
   justify-content: space-between;
   position: relative;
+  margin: 20px 0;
 }
 
 header .navigation-bar .logo h1 {
-  font-size: 2.6rem;
+  font-size: 2.3rem;
+  line-height: 40px;
   font-weight: 900;
   color: rgb(255, 255, 255);
   margin: 10px 30px;
   position: relative;
 }
 
-header .navigation-bar .logo h1 a{
+header .navigation-bar .logo h1 a {
   color: rgb(255, 255, 255);
 }
 
-header .navigation-bar .logo h3{
+header .navigation-bar .logo h3 {
   font-size: 1.5rem;
   color: rgb(255, 252, 163);
   transition: all 0.5s ease;
   margin: 0 50px;
   position: relative;
   cursor: pointer;
+
 }
 
 .dropdown-content {
@@ -69,14 +76,15 @@ header .navigation-bar .logo h3{
   left: 45px;
   background-color: #ffffff;
   width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.3);
   padding: 10px 10px;
   z-index: 1;
   border-radius: 10px;
   transition: all 0.5s ease;
+  font-family: 'Quicksand', sans-serif;
 }
 
-.dropdown-content  ul li a{
+.dropdown-content ul li a {
   font-size: 20px;
   margin-bottom: 20px;
   color: rgb(0, 35, 208);
@@ -87,22 +95,26 @@ header .navigation-bar .logo h3{
   transition: all 0.5s ease;
 }
 
+.drop h3 {
+  font-family: 'Quicksand', sans-serif;
+}
+
 .drop:hover .dropdown-content {
   display: block;
 }
 
-header .navigation-bar .logo h3:hover{
+header .navigation-bar .logo h3:hover {
   color: rgb(255, 247, 0);
 }
 
-header .navigation-bar .menu-right{
+header .navigation-bar .menu-right {
   /* background-color: antiquewhite; */
   display: flex;
   align-items: center;
   position: relative;
 }
 
-header .navigation-bar .menu-right img{
+header .navigation-bar .menu-right img {
   display: block;
   width: 30%;
   margin: 0 auto;
@@ -113,33 +125,34 @@ header .navigation-bar .menu-right img{
   position: relative;
 }
 
-header .navigation-bar .menu-right span{
+header .navigation-bar .menu-right span {
   cursor: pointer;
   font-size: 40px;
   position: absolute;
-  top: 10px;
-  right: 80px;
+  top: 25px;
+  right: 85px;
   color: rgb(255, 247, 0);
 }
 
 .menu-right .dropdown-acount {
   display: none;
   position: absolute;
-  top: 56px;
+  top: 53px;
   right: 40px;
   background-color: #ffffff;
   width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.3);
   padding: 10px 10px;
   z-index: 1;
   border-radius: 10px;
   transition: all 0.5s ease;
 }
 
-.menu-right .dropdown-acount ul li a{
+.menu-right .dropdown-acount ul li a {
   font-size: 20px;
   margin-bottom: 20px;
   color: rgb(0, 35, 208);
+  font-family: 'Quicksand', sans-serif;
 }
 
 .drop-account {
@@ -158,17 +171,20 @@ header .navigation-bar .menu-right span{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  /*font-family: 'Quicksand', sans-serif;*/
 }
 
 
 .main-page .logo-main {
   /* background-color: aqua; */
   width: 45%;
-
 }
+
 .main-page .logo-main h1 {
   text-align: center;
   font-size: 3.5rem;
+  line-height: 60px;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .main-page .logo-main img {
@@ -191,7 +207,7 @@ ACCOUNT PAGE  */
 }
 
 /* SECTION ACCOUNT PAGE */
-.account-page .info-box{
+.account-page .info-box {
   width: 90%;
   display: flex;
   align-items: center;
@@ -200,40 +216,49 @@ ACCOUNT PAGE  */
   border: 2px solid black;
 }
 
-.account-page .info-box img{
+.account-page .info-box img {
   width: 20%;
   border-radius: 50%;
   margin: 20px;
 }
 
-.account-page .info-box .main-info-box{
+.account-page .info-box .main-info-box {
   margin: 20px;
-  width: 50%;
+  width: 100%;
 }
-.account-page .info-box .main-info-box h1{
-  font-size: 2.5rem;
+
+.account-page .info-box .main-info-box h1 {
+  font-size: 2rem;
+  font-family: 'Quicksand', sans-serif;
 }
+
 .account-page .info-box .main-info-box h5 {
   font-size: 1rem;
+  font-family: 'Quicksand', sans-serif;
 }
-.account-page .info-box .main-info-box h3 {
+
+.account-page .info-box .main-info-box p {
   font-size: 1.5rem;
-  line-height: 50px;
+  line-height: 30px;
+  font-family: 'Quicksand', sans-serif;
 }
-.account-page .info-box .main-info-box span{
-  font-size: 1.7rem;
-  font-weight: 100;
-}
+
+/*.account-page .info-box .main-info-box span{*/
+/*  font-size: 1.7rem;*/
+/*  font-weight: 100;*/
+/*  font-family: 'Quicksand', sans-serif;*/
+/*}*/
 
 .account-page .info-box .edit-box {
   display: flex;
   flex-direction: column;
   width: 30%;
-  margin: 0px 90px;
+  margin: 20px 90px;
   border: 20px solid transparent;
   outline: 5px solid black;
   border-radius: 10px;
 }
+
 .account-page .info-box .edit-box button {
   width: 300px;
   margin: 20px auto;
@@ -243,27 +268,77 @@ ACCOUNT PAGE  */
   font-size: 1.5rem;
   border-radius: 10px;
   cursor: pointer;
+  font-family: 'Quicksand', sans-serif;
+  transition: all 0.5s ease;
+
 }
 
+.account-page .info-box .edit-box button:hover {
+  color: white;
+  background-color: rgba(0, 35, 208, 0.75);
+  transform: translateY(-15px);
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+}
 
 /* TEACHER MANAGE */
-
-svg{
+svg {
   width: 15%;
+  transition: all 0.3s linear;
 }
 
-.teacher-management .title-teacher{
+
+.teacher-management {
+  overflow: hidden;
+}
+
+/*teacher-card*/
+.teacher-management .title-teacher {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.teacher-management .title-teacher h1{
+.teacher-management .title-teacher h1 {
+  font-family: 'Quicksand', sans-serif;
+}
+
+.teacher-management .title-teacher .search-box {
+  margin: 50px 50px;
+}
+
+.teacher-management .title-teacher .search-box input {
+  border: 1px solid black;
+  padding: 15px;
+  font-size: 1.4rem;
+  font-family: 'Quicksand', sans-serif;
+  border-radius: 10px;
+  width: 300px;
+}
+
+.teacher-management .title-teacher .search-box .add-btn {
+  font-size: 1.4rem;
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
+  font-family: 'Quicksand', sans-serif;
+  border-radius: 10px;
+  transition: all 0.5s ease;
+}
+
+.teacher-management .title-teacher .search-box .add-btn:hover {
+  color: white;
+  background-color: rgba(0, 35, 208, 0.75);
+  transform: translateY(-15px);
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.teacher-management .title-teacher h1 {
   font-size: 3rem;
   margin: 50px 30px;
 }
 
-.teacher-management .title-teacher a{
+.teacher-management .title-teacher a {
   margin: 50px 30px;
   font-size: 2rem;
   background-color: transparent;
@@ -273,45 +348,75 @@ svg{
   transition: all 0.5s ease;
   color: black;
 }
-.teacher-management .title-teacher a:hover{
+
+.teacher-management .title-teacher a:hover {
   background-color: rgb(118, 255, 118);
 }
 
-.teacher-management .teacher-card{
+.teacher-management .teacher-card {
   /* background-color: aquamarine; */
   display: flex;
   width: 90%;
   margin: 20px auto;
   border: 2px solid black;
+  transition: all 0.4s ease;
 
 }
-.teacher-management .teacher-card img{
+
+.teacher-management .teacher-card:hover {
+  transform: scale(1.05);
+}
+
+
+.teacher-management .teacher-card img {
   margin: 30px;
   border-radius: 50%;
   width: 6%;
   border: 2px solid black;
 }
 
-.teacher-management .teacher-card .teacher-info{
+.teacher-management .teacher-card .teacher-info {
   width: 70%;
   margin: 30px;
   font-size: 1.2rem;
   line-height: 50px;
 }
-.teacher-management .teacher-card .menu-box{
+
+.teacher-management .teacher-card .teacher-info h2 {
+  font-family: 'Quicksand', sans-serif;
+}
+
+.teacher-management .teacher-card .menu-box {
   width: 60%;
   margin: 30px;
   display: flex;
   align-items: center;
 }
-.teacher-management .teacher-card .menu-box a{
+
+.teacher-management .teacher-card .menu-box a {
   color: black;
   text-align: center;
   border: 1px solid black;
   padding: 5px;
   margin: 20px;
   font-size: 1.5rem;
+  transition: all 0.3s linear;
+  border-radius: 10px;
 }
+
+
+.teacher-management .teacher-card .menu-box a:hover {
+  color: white;
+  background-color: rgba(0, 35, 208, 0.75);
+  transform: scale(1.09);
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.teacher-management .teacher-card .menu-box a:hover svg path, a:hover {
+  fill: white;
+}
+
 
 /* TEACHER POPUPS */
 .overlay {
@@ -325,10 +430,12 @@ svg{
   visibility: hidden;
   opacity: 0;
 }
+
 .overlay:target {
   visibility: visible;
   opacity: 1;
 }
+
 .popup {
   margin: 70px auto;
   padding: 20px;
@@ -339,7 +446,7 @@ svg{
   transition: all 2s ease-in-out;
 }
 
-.popup .popup-title{
+.popup .popup-title {
   font-size: 3rem;
 }
 
@@ -353,6 +460,7 @@ svg{
   text-decoration: none;
   color: rgb(0, 0, 0);
 }
+
 .popup .content {
   max-height: 30%;
   overflow: auto;
@@ -360,16 +468,19 @@ svg{
   line-height: 40px;
 }
 
-.popup .content h3{
+.popup .content h3 {
   font-size: 1.3rem;
 }
-.popup .content span{
+
+.popup .content span {
   font-size: 1.3rem;
 }
+
 .popup .content h2 {
   font-size: 1.3rem;
 }
-.popup .content button{
+
+.popup .content button {
   background-color: transparent;
   color: black;
   border: 2px solid black;
@@ -378,35 +489,38 @@ svg{
   border-radius: 10px;
   cursor: pointer;
 }
-.popup .content button:active{
+
+.popup .content button:active {
   background-color: rgb(255, 248, 175);;
 }
-.popup .content .del-btn{
+
+.popup .content .del-btn {
   background-color: rgb(255, 100, 100);
   font-size: 1.5rem;
   margin: 20px 0;
 }
-.popup .content .del-btn:active{
+
+.popup .content .del-btn:active {
   background-color: red;
 }
 
 .popup .content form {
   display: flex;
   flex-direction: column;
-  margin: 40px ;
+  margin: 40px;
 }
 
-.popup .content form label{
+.popup .content form label {
   font-size: 1.3rem;
 }
 
-.popup .content form input{
+.popup .content form input {
   padding: 10px;
   border-radius: 10px;
   border: 1px solid black;
 }
 
-.popup .content form .submit{
+.popup .content form .submit {
   margin-top: 20px;
 }
 
@@ -414,15 +528,42 @@ svg{
   display: flex;
   flex-direction: column;
 }
+
 .popup .info-content img {
   width: 50%;
   display: block;
   margin: 0 auto;
 }
 
-.popup .edit-content #sub1{
+.popup .edit-content #sub1 {
   margin-top: 20px;
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+/*html, body { height: 100%; }*/
+/*body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }*/
+
+.appear h4{
+  font-size: 20px;
+  font-family: 'Quicksand', sans-serif;
+  margin-left: 35px;
+}
+
+.disappear h4{
+  font-size: 20px;
+  font-family: 'Quicksand', sans-serif;
+  margin-left: 35px;
+  display: none;
+}
+
+.appear h2{
+  font-size: 20px;
+  font-family: 'Quicksand', sans-serif;
+  margin-left: 35px;
+}
+
+.disappear h2{
+  font-size: 20px;
+  font-family: 'Quicksand', sans-serif;
+  margin-left: 35px;
+  display: none;
+}

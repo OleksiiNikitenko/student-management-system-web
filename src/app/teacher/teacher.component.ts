@@ -2,27 +2,25 @@ import {Component, OnInit} from '@angular/core';
 import {Teacher} from "./teacher";
 import {TeacherService} from "./teacher.service";
 import {HttpErrorResponse} from "@angular/common/http";
-import {AddTeacherComponent} from "../popups/add-teacher/add-teacher.component";
-import {DeleteComponent} from "../popups/delete/delete.component";
+import {AddTeacherComponent} from "../popups/teacher/add-teacher/add-teacher.component";
+import {DeleteComponent} from "../popups/teacher/delete/delete.component";
 import {MatDialog} from "@angular/material/dialog";
-import {ShowInfoComponent} from "../popups/show-info/show-info.component";
-import {EmailComponent} from "../popups/email/email.component";
-import {EditComponent} from "../popups/edit/edit.component";
+import {ShowInfoComponent} from "../popups/teacher/show-info/show-info.component";
+import {EmailComponent} from "../popups/teacher/email/email.component";
+import {EditComponent} from "../popups/teacher/edit/edit.component";
 
 @Component({
   selector: 'app-teacher',
   templateUrl: './teacher.component.html',
-  styleUrls: ['./teacher.component.css'],
-  providers: [AddTeacherComponent]
+  styleUrls: ['./teacher.component.css']
 })
 export class TeacherComponent implements OnInit {
 
   public teachers: Teacher[] = [];
-  public logResFromPopup: any;
   public selectedTeacher: any;
+  public isFoundTeacher: boolean = false;
 
   constructor(private teacherService: TeacherService,
-              public dialogAddTeacher: AddTeacherComponent,
               public dialog: MatDialog) {
   }
 
@@ -45,10 +43,26 @@ export class TeacherComponent implements OnInit {
     this.selectedTeacher = teacher;
   }
 
+  searchTeachers(key: string): void {
+    const results: Teacher[] = [];
+    this.isFoundTeacher = false;
+    for (const teacher of this.teachers) {
+      if (teacher.name.toLowerCase().indexOf(key.toLowerCase()) !== -1 ||
+        teacher.email.toLowerCase().indexOf(key.toLowerCase()) !== -1 ||
+        teacher.jobTitle.toLowerCase().indexOf(key.toLowerCase()) !== -1 ||
+        teacher.phone.toLowerCase().indexOf(key.toLowerCase()) !== -1)
+        results.push(teacher);
+    }
+    this.teachers = results;
+    if (results.length === 0 || !key) {
+       this.getTeachers();
+      this.isFoundTeacher = true;
+    }
+  }
+
   openAddTeacherDialog() {
     const dialogRef = this.dialog.open(AddTeacherComponent);
     dialogRef.afterClosed().subscribe(result => {
-      this.logResFromPopup = result;
       console.log(` data: ${result}`);
       this.getTeachers();
     })
@@ -66,7 +80,6 @@ export class TeacherComponent implements OnInit {
       }
     });
     dialogRef.afterClosed().subscribe(result => {
-      this.logResFromPopup = result;
       console.log(` data: ${result}`)
     })
   }
@@ -81,7 +94,6 @@ export class TeacherComponent implements OnInit {
       }
     });
     dialogRef.afterClosed().subscribe(result => {
-      this.logResFromPopup = result;
       console.log(` data: ${result}`)
     })
   }
@@ -95,7 +107,6 @@ export class TeacherComponent implements OnInit {
       }
     });
     dialogRef.afterClosed().subscribe(result => {
-      this.logResFromPopup = result;
       console.log(` data: ${result}`);
       this.getTeachers();
     })
@@ -115,7 +126,6 @@ export class TeacherComponent implements OnInit {
       }
     });
     dialogRef.afterClosed().subscribe(result => {
-      this.logResFromPopup = result;
       console.log(` data: ${result}`);
       this.getTeachers();
     })

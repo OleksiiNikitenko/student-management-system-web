@@ -1,5 +1,5 @@
 import {Component, Inject, OnInit} from '@angular/core';
-import {TeacherService} from "../../teacher/teacher.service";
+import {TeacherService} from "../../../teacher/teacher.service";
 import {MAT_DIALOG_DATA, MatDialog} from "@angular/material/dialog";
 import {HttpErrorResponse} from "@angular/common/http";
 
@@ -10,21 +10,21 @@ import {HttpErrorResponse} from "@angular/common/http";
 })
 export class DeleteComponent implements OnInit {
 
-  receivedTeacher: any;
+  receivedUser: any;
 
   constructor(public teacherService: TeacherService,
               @Inject(MAT_DIALOG_DATA) public data: any,
               public dialog: MatDialog) {
-    this.receivedTeacher = data;
+    this.receivedUser = data;
   }
 
   ngOnInit(): void {
   }
 
-  deleteTeacher() {
-    console.log(this.receivedTeacher.id)
+  deleteUser() {
+    console.log(this.receivedUser.id)
 
-    this.teacherService.deleteTeacher(this.receivedTeacher.id).subscribe(
+    this.teacherService.deleteTeacher(this.receivedUser.id).subscribe(
       (response: void) => {
         console.log(response);
         this.dialog.closeAll();

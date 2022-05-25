@@ -1,0 +1,50 @@
+
+.mat-form-field {
+  /*display: inline-block;*/
+  margin: 10px;
+  border-radius: 10px;
+  font-family: 'Quicksand', sans-serif;
+  width: 300px;
+}
+
+.mat-tab label {
+  font-family: 'Quicksand', sans-serif;
+}
+
+.label {
+  font-family: 'Quicksand', sans-serif;
+}
+
+.mat-card-title {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 2rem;
+}
+
+.mat-button {
+  color: black;
+  text-align: center;
+  border: 1px solid black;
+  padding: 5px 20px;
+  float: right;
+  margin-left: 20px;
+  font-size: 1.5rem;
+  transition: all 0.3s linear;
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+.mat-button:hover {
+  color: white;
+  background-color: rgba(0, 35, 208, 0.75);
+  transform: scale(1.09);
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+#add-teacher-btn {
+  color: black;
+  background-color: rgba(0, 176, 80, 0.5);
+}
+
+#add-teacher-btn:hover {
+  background-color: rgba(0, 176, 80, 1);
+}

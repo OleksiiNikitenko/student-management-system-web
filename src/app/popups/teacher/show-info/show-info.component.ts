@@ -1,6 +1,5 @@
 import {Component, Inject, OnInit} from '@angular/core';
-import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
-import {TeacherComponent} from "../../teacher/teacher.component";
+import {MAT_DIALOG_DATA} from "@angular/material/dialog";
 
 @Component({
   selector: 'app-show-info',
@@ -11,8 +10,7 @@ export class ShowInfoComponent implements OnInit {
 
   receivedTeacher: any;
 
-  constructor(public dialogRef: MatDialogRef<TeacherComponent>,
-              @Inject(MAT_DIALOG_DATA) public data: any,) {
+  constructor(@Inject(MAT_DIALOG_DATA) public data: any,) {
     this.receivedTeacher = data;
   }
 

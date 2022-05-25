@@ -1,0 +1,78 @@
+<div class="center-content">
+  <div class="example-card">
+    <mat-card-header>
+
+      <mat-card-title>Add Student</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+      <mat-tab-group>
+        <form [formGroup]="addStudentForm">
+          <mat-tab label="Input New Student's Data">
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Name</mat-label>
+              <input formControlName="name" type="text" matInput placeholder="input name" value=""/>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Faculty</mat-label>
+              <input formControlName="faculty" type="text" matInput placeholder="input faculty" value=""/>
+            </mat-form-field>
+            <br>
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Study Year</mat-label>
+              <input formControlName="studyYear" type="text" matInput placeholder="input study year" value=""/>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Grade</mat-label>
+              <input formControlName="grade" type="text" matInput placeholder="input grade" value=""/>
+            </mat-form-field>
+            <br>
+              <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Group Name</mat-label>
+                <input formControlName="groupName" type="text" matInput placeholder="input group name" value=""/>
+              </mat-form-field>
+
+              <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>App Role</mat-label>
+                <input formControlName="appRole" type="text" matInput placeholder="input app role" value=""/>
+              </mat-form-field>
+            <br>
+              <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Email</mat-label>
+                <input formControlName="email" type="email" matInput placeholder="input email" value=""/>
+              </mat-form-field>
+
+              <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Reserve Email</mat-label>
+                <input formControlName="reserveEmail" type="email" matInput placeholder="input reserve email" value=""/>
+              </mat-form-field>
+            <br>
+              <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Phone</mat-label>
+                <input formControlName="phone" type="tel" matInput placeholder="input phone" value=""/>
+              </mat-form-field>
+
+              <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>ImgUrl</mat-label>
+                <input formControlName="imgUrl" type="text" matInput placeholder="input imgUrl" value=""/>
+              </mat-form-field>
+
+
+
+
+          </mat-tab>
+        </form>
+      </mat-tab-group>
+
+    </mat-card-content>
+    <mat-card-actions>
+      <button [disabled]="addStudentForm.invalid" mat-dialog-close mat-button color="primary" (click)="addStudent()"
+              id="add-teacher-btn">Add Student
+      </button>
+      <button mat-button mat-dialog-close color="primary">Cancel</button>
+    </mat-card-actions>
+  </div>
+</div>
+
