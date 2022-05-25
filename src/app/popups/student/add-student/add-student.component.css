@@ -1,8 +1,10 @@
+
 .mat-form-field {
-  display: block;
+  /*display: inline-block;*/
   margin: 10px;
   border-radius: 10px;
   font-family: 'Quicksand', sans-serif;
+  width: 300px;
 }
 
 .mat-tab label {
