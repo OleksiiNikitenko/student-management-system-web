@@ -11,11 +11,11 @@ import {HomePageComponent} from './home-page/home-page.component';
 import {StudentsComponent} from './students/students.component';
 import {AccountInfoComponent} from './account-info/account-info.component';
 import {NavBarComponent} from './nav-bar/nav-bar.component';
-import {AddTeacherComponent} from './popups/add-teacher/add-teacher.component';
-import {ShowInfoComponent} from './popups/show-info/show-info.component';
-import {EmailComponent} from './popups/email/email.component';
-import {EditComponent} from './popups/edit/edit.component';
-import {DeleteComponent} from './popups/delete/delete.component';
+import {AddTeacherComponent} from './popups/teacher/add-teacher/add-teacher.component';
+import {ShowInfoComponent} from './popups/teacher/show-info/show-info.component';
+import {EmailComponent} from './popups/teacher/email/email.component';
+import {EditComponent} from './popups/teacher/edit/edit.component';
+import {DeleteComponent} from './popups/teacher/delete/delete.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatCardModule} from "@angular/material/card";
 import {MatTabsModule} from "@angular/material/tabs";
@@ -28,6 +28,9 @@ import {MatButtonModule} from "@angular/material/button";
 import {MatTableModule} from "@angular/material/table";
 import {MatSortModule} from "@angular/material/sort";
 import {MatPaginatorModule} from "@angular/material/paginator";
+import {AddStudentComponent} from './popups/student/add-student/add-student.component';
+import {EditStudentComponent} from './popups/student/edit-student/edit-student.component';
+import {ShowInfoStudentComponent} from './popups/student/show-info-student/show-info-student.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +44,10 @@ import {MatPaginatorModule} from "@angular/material/paginator";
     ShowInfoComponent,
     EmailComponent,
     EditComponent,
-    DeleteComponent
+    DeleteComponent,
+    AddStudentComponent,
+    EditStudentComponent,
+    ShowInfoStudentComponent
   ],
   imports: [
     BrowserModule,
@@ -100,7 +106,8 @@ import {MatPaginatorModule} from "@angular/material/paginator";
     EmailComponent,
     DeleteComponent,
     EditComponent,
-    AddTeacherComponent]
+    AddTeacherComponent,
+    AddStudentComponent]
 })
 export class AppModule {
 }

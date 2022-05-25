@@ -1,9 +1,9 @@
 import {Component, Inject, OnInit} from '@angular/core';
 import {MAT_DIALOG_DATA, MatDialog, MatDialogRef} from "@angular/material/dialog";
-import {TeacherComponent} from "../../teacher/teacher.component";
-import {TeacherService} from "../../teacher/teacher.service";
+import {TeacherComponent} from "../../../teacher/teacher.component";
+import {TeacherService} from "../../../teacher/teacher.service";
 import {HttpErrorResponse} from "@angular/common/http";
-import {Teacher} from "../../teacher/teacher";
+import {Teacher} from "../../../teacher/teacher";
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 
 @Component({

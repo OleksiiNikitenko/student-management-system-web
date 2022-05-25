@@ -12,15 +12,3 @@ export interface Student {
   imgUrl: string;
   studentCode: string;
 }
-
-// private Long id;
-// private String name;
-// private String faculty;
-// private String studyYear;
-// private String grade;
-// private String groupName;
-// private String appRole;
-// private String email;
-// private String reserveEmail;
-// private String phone;
-// private String imgUrl;

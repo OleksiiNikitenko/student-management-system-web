@@ -1,5 +1,5 @@
 import {Component, Inject, OnInit} from '@angular/core';
-import {TeacherService} from "../../teacher/teacher.service";
+import {TeacherService} from "../../../teacher/teacher.service";
 import {MAT_DIALOG_DATA, MatDialog} from "@angular/material/dialog";
 import {HttpErrorResponse} from "@angular/common/http";
 

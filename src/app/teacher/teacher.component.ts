@@ -2,12 +2,12 @@ import {Component, OnInit} from '@angular/core';
 import {Teacher} from "./teacher";
 import {TeacherService} from "./teacher.service";
 import {HttpErrorResponse} from "@angular/common/http";
-import {AddTeacherComponent} from "../popups/add-teacher/add-teacher.component";
-import {DeleteComponent} from "../popups/delete/delete.component";
+import {AddTeacherComponent} from "../popups/teacher/add-teacher/add-teacher.component";
+import {DeleteComponent} from "../popups/teacher/delete/delete.component";
 import {MatDialog} from "@angular/material/dialog";
-import {ShowInfoComponent} from "../popups/show-info/show-info.component";
-import {EmailComponent} from "../popups/email/email.component";
-import {EditComponent} from "../popups/edit/edit.component";
+import {ShowInfoComponent} from "../popups/teacher/show-info/show-info.component";
+import {EmailComponent} from "../popups/teacher/email/email.component";
+import {EditComponent} from "../popups/teacher/edit/edit.component";
 
 @Component({
   selector: 'app-teacher',
@@ -134,6 +134,7 @@ export class TeacherComponent implements OnInit {
     });
     dialogRef.afterClosed().subscribe(result => {
       this.logResFromPopup = result;
+
       console.log(` data: ${result}`);
       this.getTeachers();
     })
