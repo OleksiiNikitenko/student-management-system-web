@@ -10,6 +10,7 @@
         <p class="add-btn" (click)="openAddStudentDialog()">Add Student</p>
         <input id="search" matInput ngModel (ngModelChange)="searchStudents(key.value)" #key="ngModel" type="search"
                placeholder="Search students">
+        <h2 style="font-family: 'Quicksand', sans-serif; margin-top: 5px;">Students in system: {{students.length}}</h2>
       </div>
     </div>
     <div [ngClass]="key.value === ''? 'disappear' : 'appear'"  *ngIf="students?.length == 0 || this.isFoundStudent"  >
