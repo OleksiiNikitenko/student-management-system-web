@@ -31,6 +31,8 @@ import {AddStudentComponent} from './popups/student/add-student/add-student.comp
 import {EditStudentComponent} from './popups/student/edit-student/edit-student.component';
 import {ShowInfoStudentComponent} from './popups/student/show-info-student/show-info-student.component';
 import { DeleteStudentComponent } from './popups/student/delete-student/delete-student.component';
+import { FilterPipe } from './pipes/filter.pipe';
+import {SortPipe} from "./pipes/sort.pipe";
 
 @NgModule({
   declarations: [
@@ -48,7 +50,9 @@ import { DeleteStudentComponent } from './popups/student/delete-student/delete-s
     AddStudentComponent,
     EditStudentComponent,
     ShowInfoStudentComponent,
-    DeleteStudentComponent
+    DeleteStudentComponent,
+    FilterPipe,
+    SortPipe
   ],
   imports: [
     BrowserModule,

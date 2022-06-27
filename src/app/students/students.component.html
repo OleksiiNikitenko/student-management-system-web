@@ -16,7 +16,24 @@
     <div [ngClass]="key.value === ''? 'disappear' : 'appear'"  *ngIf="students?.length == 0 || this.isFoundStudent"  >
       <h4>No students found...</h4>
     </div>
-    <div class="teacher-card" *ngFor="let student of students">
+
+    <label>Filter by Faculty: </label>
+    <input [(ngModel)]="faculty">
+    <button type="button" (click)="onFacultyFilter()">Filter</button>
+    <button type="button" (click)="onFacultyFilterClear()">Clear</button>
+
+    <label>Sort by: </label>
+    <select [(ngModel)]="sortByParam">
+      <option value="faculty">Faculty</option>
+      <option value="grade">Grade</option>
+      <option value="groupName">Group</option>
+      <option value="studyYear">Study Year</option>
+      <option value="appRole">App Role</option>
+    </select>
+    <button type="button" (click)="onSortDirection()">Sort</button>
+    <button type="button" (click)="onSortClear()">Clear</button>
+
+    <div class="teacher-card" *ngFor="let student of students|filter:searchFaculty:'faculty'|sort:[sortByParam,sortDirection]">
       <img src="{{student?.imgUrl}}" alt="1">
       <div class="teacher-info">
         <h2>{{student?.name}}</h2>

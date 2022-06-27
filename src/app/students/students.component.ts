@@ -20,6 +20,12 @@ export class StudentsComponent implements OnInit {
   public selectedStudent: any;
   public isFoundStudent: boolean = false;
 
+  public faculty = '';
+  public searchFaculty = '';
+
+  public sortByParam = '';
+  public sortDirection = 'asc';
+
   constructor(private studentService: StudentService,
               public dialog: MatDialog) {
   }
@@ -138,5 +144,26 @@ export class StudentsComponent implements OnInit {
   }
 
 
+  onFacultyFilter() {
+    this.searchFaculty = this.faculty;
+  }
 
+  onFacultyFilterClear() {
+    this.faculty = '';
+    this.searchFaculty = '';
+  }
+
+  onSortDirection() {
+    if (this.sortDirection === 'desc') {
+      this.sortDirection = 'asc';
+    } else {
+      this.sortDirection = 'desc';
+    }
+  }
+
+  onSortClear() {
+    this.sortByParam = '';
+    this.sortDirection = 'asc';
+    this.getStudents();
+  }
 }
