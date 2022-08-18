@@ -543,15 +543,19 @@ svg {
 /*body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }*/
 
 .appear h4{
-  font-size: 20px;
+  color: red;
+  font-size: 30px;
   font-family: 'Quicksand', sans-serif;
-  margin-left: 35px;
+  /*margin-left: 35px;*/
+  margin: 40px;
 }
 
 .disappear h4{
-  font-size: 20px;
+  color: red;
+  font-size: 30px;
   font-family: 'Quicksand', sans-serif;
-  margin-left: 35px;
+  /*margin-left: 35px;*/
+  margin: 40px;
   display: none;
 }
 
