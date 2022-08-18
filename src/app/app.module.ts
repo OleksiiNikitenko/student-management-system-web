@@ -33,6 +33,12 @@ import {ShowInfoStudentComponent} from './popups/student/show-info-student/show-
 import { DeleteStudentComponent } from './popups/student/delete-student/delete-student.component';
 import { FilterPipe } from './pipes/filter.pipe';
 import {SortPipe} from "./pipes/sort.pipe";
+import { StudentChartsComponent} from './student-charts/student-charts.component';
+import { FooterComponent } from './footer/footer.component';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
+import { TermsComponent } from './terms/terms.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +58,13 @@ import {SortPipe} from "./pipes/sort.pipe";
     ShowInfoStudentComponent,
     DeleteStudentComponent,
     FilterPipe,
-    SortPipe
+    SortPipe,
+    StudentChartsComponent,
+    FooterComponent,
+    AboutComponent,
+    ContactComponent,
+    PrivacyPolicyComponent,
+    TermsComponent
   ],
   imports: [
     BrowserModule,
@@ -86,6 +98,26 @@ import {SortPipe} from "./pipes/sort.pipe";
       {
         path: 'accountInfo',
         component: AccountInfoComponent
+      },
+      {
+        path: 'studentsStatistics',
+        component: StudentChartsComponent
+      },
+      {
+        path: 'about',
+        component: AboutComponent
+      },
+      {
+        path: 'contact',
+        component: ContactComponent
+      },
+      {
+        path: 'privacyPolicy',
+        component: PrivacyPolicyComponent
+      },
+      {
+        path: 'terms',
+        component: TermsComponent
       },
       // {path: 'profile/:id', component: TeacherProfile},
     ]),

@@ -13,15 +13,13 @@
         <h2 style="font-family: 'Quicksand', sans-serif; margin-top: 5px;">Students in system: {{students.length}}</h2>
       </div>
     </div>
-    <div [ngClass]="key.value === ''? 'disappear' : 'appear'"  *ngIf="students?.length == 0 || this.isFoundStudent"  >
-      <h4>No students found...</h4>
-    </div>
-
-    <label>Filter by Faculty: </label>
-    <input [(ngModel)]="faculty">
-    <button type="button" (click)="onFacultyFilter()">Filter</button>
-    <button type="button" (click)="onFacultyFilterClear()">Clear</button>
-
+  <div class="filter-box">
+      <label>Filter by Faculty: </label>
+      <input [(ngModel)]="faculty">
+      <button type="button" (click)="onFacultyFilter()">Filter</button>
+      <button id="clear-btn1" type="button" (click)="onFacultyFilterClear()">Clear</button>
+  </div>
+    <div class="sort-box">
     <label>Sort by: </label>
       <select [(ngModel)]="sortByParam">
         <option value="faculty">Faculty</option>
@@ -32,6 +30,10 @@
       </select>
       <button type="button" (click)="onSortDirection()">Sort</button>
       <button id="clear-btn2" type="button" (click)="onSortClear()">Clear</button>
+    </div>
+
+    <div [ngClass]="key.value === ''? 'disappear' : 'appear'"  *ngIf="students?.length == 0 || this.isFoundStudent"  >
+      <h4>No students found...</h4>
     </div>
 
     <div class="teacher-card" *ngFor="let student of students|filter:searchFaculty:'faculty'|sort:[sortByParam,sortDirection]">
@@ -72,5 +74,6 @@
       </div>
     </div>
   </section>
+  <app-footer></app-footer>
 </header>
 

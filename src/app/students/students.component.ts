@@ -143,7 +143,6 @@ export class StudentsComponent implements OnInit {
     })
   }
 
-
   onFacultyFilter() {
     this.searchFaculty = this.faculty;
   }
