@@ -19,6 +19,10 @@ export class TeacherComponent implements OnInit {
   public teachers: Teacher[] = [];
   public selectedTeacher: any;
   public isFoundTeacher: boolean = false;
+  public propParam = ''
+  public filterParam = ''
+  public sortByParam = '';
+  public sortDirection = 'asc';
 
   constructor(private teacherService: TeacherService,
               public dialog: MatDialog) {
@@ -131,4 +135,26 @@ export class TeacherComponent implements OnInit {
     })
   }
 
+  onNameFilter() {
+    this.filterParam = this.propParam;
+  }
+
+  onNameFilterClear() {
+    this.propParam = '';
+    this.filterParam = '';
+  }
+
+  onSortDirection() {
+    if (this.sortDirection === 'desc') {
+      this.sortDirection = 'asc';
+    } else {
+      this.sortDirection = 'desc';
+    }
+  }
+
+  onSortClear() {
+    this.sortByParam = '';
+    this.sortDirection = 'asc';
+    this.getTeachers();
+  }
 }

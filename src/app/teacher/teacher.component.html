@@ -17,7 +17,27 @@
       <h4>No teachers found...</h4>
     </div>
 
-    <div class="teacher-card" *ngFor="let teacher of teachers">
+    <div class="filter-box">
+      <label>Filter by Name: </label>
+      <input [(ngModel)]="propParam">
+      <button type="button" (click)="onNameFilter()">Filter</button>
+      <button id="clear-btn1" type="button" (click)="onNameFilterClear()">Clear</button>
+    </div>
+    <div class="sort-box">
+      <label>Sort by: </label>
+      <select [(ngModel)]="sortByParam">
+        <option value="name">Name</option>
+        <option value="jobTitle">Job Title</option>
+      </select>
+      <button type="button" (click)="onSortDirection()">Sort</button>
+      <button id="clear-btn2" type="button" (click)="onSortClear()">Clear</button>
+    </div>
+
+    <div [ngClass]="key.value === ''? 'disappear' : 'appear'"  *ngIf="teachers?.length == 0 || this.isFoundTeacher"  >
+      <h4>No teachers found...</h4>
+    </div>
+
+    <div class="teacher-card" *ngFor="let teacher of teachers|filter:filterParam:'jobTitle'|sort:[sortByParam,sortDirection]">
       <img src="{{teacher?.imgUrl}}" alt="1">
       <div class="teacher-info">
         <h2>{{teacher?.name}}</h2>
@@ -55,4 +75,5 @@
       </div>
     </div>
   </section>
+  <app-footer></app-footer>
 </header>
